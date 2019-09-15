@@ -1,0 +1,24 @@
+-
+  var myFullName = 'Cristi Toma'
+  var myJobTitle = 'Junior Wizzard'
+  var socialList = [
+    {icon: 'facebook2', url: 'https://google.com'},
+    {icon: 'twitter', url: 'https://google.com'},
+    {icon: 'youtube', url: 'https://google.com'},
+    {icon: 'google-plus2', url: 'https://google.com'},
+    {icon: 'linkedin', url: 'https://google.com'},
+    {icon: 'earth', url: 'https://google.com'},
+    {icon: 'stackoverflow', url: 'https://google.com'},
+    {icon: 'skype', url: 'https://google.com'},
+    {icon: 'github', url: 'https://google.com'},
+  ]
+#landing-page
+.landing-page
+  .landing-page__wrapper
+    h1.landing-page__name=myFullName
+    h2.landing-page__title=myJobTitle
+    ul.landing-page__social
+      each social in socialList
+        li.landing-page__item
+          label.landing-page__label(for="")
+            span(class=`my-cv2__icon--${social.icon}`)

@@ -1,0 +1,48 @@
+//- data comes here
+-
+  var header = "#about me"
+  var imagePath = "asset/image/me1.png"
+  var myFullName = "Cristi Toma"
+  var myTitle = "Junior Wizzard"
+  var slogan = "If you are affraid of bears, don't go into the forrest !"
+  var achievement = {
+    title: " titlu", 
+    content : " lot s of useless text just to see the content of itlot s of useless text just to see the content of itlot s of useless text just to see the content of itlot s of useless text just to see the content of it"
+  }
+  var coolStuff = {
+    title : "ttt",
+    buttonList : [
+      {
+        url : "http://github.com/cristitomaaa",
+        icon : "github",
+        label : "Click to visit my GitHub Page"
+      },
+      {
+        url : "asset/doc/cvcristi.docx",
+        icon : "file-word",
+        label : "Click to download my C.V."
+      },
+      {
+        url : "http://nextbrand.uk",
+        icon : "earth",
+        label : "Click to visit my website"
+      }
+    ]
+  }
+
+//- the view comes here
+#about-me
+.about-me
+  .about-me__header=header
+  .about-me__avatar-wrapper
+    img.about-me__avatar(src=imagePath)
+  .about-me__full-name=myFullName
+  .about-me__full-title=myTitle
+  .about-me__slogan=slogan
+
+  .about-me__title=achievement.title
+  .about-me__title=achievement.content
+  each button in coolStuff.buttonList
+    a(href=button.url)
+      span=button.label
+      span(class=`my-cv2__icon--${button.icon}`)

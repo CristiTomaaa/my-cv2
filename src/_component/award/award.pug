@@ -1,5 +1,33 @@
 -
-  var awardHeader='#awards'
+  var awardHeader ='#awards';
+  var awardList = [
+    {
+    title: 'Best new entry Wizzard in Hogwarts',
+    description: ' 1st place in quidditch championship',
+    location: 'Hogwarts',
+    date: '2019'
+    },
+    {
+    title: 'Best new entry Wizzard in Hogwarts2',
+    description: ' 1st place in quidditch championship2',
+    location: 'Hogwarts School',
+    date: '2018'
+    }
+  ];
 #award
 .award
   .award__header=awardHeader
+  each award in awardList
+    .award__card
+      .award-icon
+        span.my-cv2__icon--trophy
+      .award__title=award.title
+      .award-icon
+        span.my-cv2__icon--info
+      .award__description=award.description
+      .award-icon
+        span.my-cv2__icon--map2
+      .award__location=award.location
+      .award-icon
+        span.my-cv2__icon--calendar
+      .award__date=award.date

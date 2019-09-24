@@ -31,18 +31,30 @@
         'resp 8',
         'resp 9',
       ]
-    }
+    },
+    {
+      title: 'asd2',
+      date: '1 jan',
+      company: 'asdas',
+      responsabilityList: [
+        'resp 4',
+        'resp 5',
+        'resp 6',
+      ]
+    },
   ];
 
 // view
 #experience
 .experience
   .experience__header=header
-  input(type="radio", name="same-name", id="experience-default")
-  label(for="experience-default") &times;
+  input.experience__input(type="radio", name="same-name", id="experience-default")
   each experience, key in experienceList
     input.experience__input(type="radio", id=`experience-id-${key}` name="same-name")
-    label.experience__title(for=`experience-id-${key}`)=experience.title
+    label.experience__title(for=`experience-id-${key}`)
+      | #{experience.title}
+      label(for="experience-default")
+        span.my-cv2__icon--plus
     .experience__details
       .experience__top
         .experience__date=experience.date

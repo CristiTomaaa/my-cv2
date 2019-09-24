@@ -1,0 +1,10 @@
+.client__header {
+  color: $color-periwinkle-gray;
+  @extend %header;
+}
+
+.client__image {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+}

@@ -1,0 +1,24 @@
+-
+  var show = 'Show message';
+  var hide = 'Hide message';
+  var descriptionList = [
+    'Your screen is on landscape mode',
+    'For the best experience on the website you can :'
+  ];
+  var itemList = [
+    'Rotate your device in portait',
+    'Resize your browser to portrait',
+    'Ignore everything and continue viewing the website',
+  ];
+
+input.landscape__input(type="checkbox", id="landscape")
+.landscape
+  label.landscape__button(for="landscape")
+    .landscape__message--show=show
+    .landscape__message--hide=hide
+  .landscape__body
+    each description in descriptionList
+      p.landscape__description=description
+    ul.landscape__list
+      each item in itemList
+        li.landscape__item=item
